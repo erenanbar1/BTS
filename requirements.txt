@@ -1,0 +1,32 @@
+# Core dependencies
+Django>=5.0,<6.0
+djangorestframework>=3.14,<4.0
+
+# Database support (PostgreSQL)
+psycopg2-binary>=2.9
+
+# CORS headers support
+django-cors-headers>=4.0
+
+# Environment variable management
+python-dotenv>=1.0
+
+# API documentation (Swagger/OpenAPI)
+drf-yasg>=1.21
+
+# JWT Authentication
+djangorestframework-simplejwt>=5.3
+
+# Development utilities
+ipython>=8.0
+
+# Security & performance
+gunicorn>=21.0
+whitenoise>=6.0
+
+# Django admin enhancements
+django-admin-interface>=0.25
+
+# Testing
+pytest>=8.0
+pytest-django>=4.5

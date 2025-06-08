@@ -1,6 +1,5 @@
 ### HOW TO BUILD THE PROJECT ###
 1. Create a python virtual environment at project directory: 
-   On Windows:
    python -m venv venv
 
 2. Activate the virtual environment:

@@ -30,3 +30,12 @@ django-admin-interface>=0.25
 # Testing
 pytest>=8.0
 pytest-django>=4.5
+
+
+#authentication 
+python manage.py startapp users
+#
+python manage.py startapp whatsapp_manager
+python manage.py startapp messaging
+python manage.py startapp debt_confirmation
+

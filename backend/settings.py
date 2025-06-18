@@ -37,6 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'domain_objects',  # Custom app for domain objects
+    'users',  # Custom app for user management
+    'whatsapp_manager',  # Custom app for WhatsApp management
+    'accounting_manager',  # Custom app for accounting management
+    'messaging',  # Custom app for messaging functionality
+    'rest_framework',  # Django REST Framework for API development
+    'corsheaders',  # CORS headers for cross-origin requests
 ]
 
 MIDDLEWARE = [

@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'accounting',
     'rest_framework',  # Django REST Framework for API development
     'corsheaders',  # CORS headers for cross-origin requests
+    'users',
+    'messaging'
 ]
 
 MIDDLEWARE = [
@@ -104,9 +106,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-AUTH_USER_MODEL = "accounting.User"
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import * as XLSX from 'xlsx'
 import ViewExcel from './ViewExcel'
 
 function UploadExcel() {
@@ -30,7 +31,20 @@ function UploadExcel() {
     const files = e.dataTransfer.files
     if (files && files[0]) {
       setFile(files[0])
+      parseExcelToJson(files[0]) // <-- Add this line
     }
+  }
+
+  const parseExcelToJson = (file: File) => {
+    const reader = new FileReader()
+    reader.onload = (e) => {
+      const data = new Uint8Array(e.target?.result as ArrayBuffer)
+      const workbook = XLSX.read(data, { type: 'array' })
+      const firstSheet = workbook.Sheets[workbook.SheetNames[0]]
+      const jsonData = XLSX.utils.sheet_to_json(firstSheet, { header: 1 })
+      console.log(jsonData.slice(0, 4)) // Log first 4 rows
+    }
+    reader.readAsArrayBuffer(file)
   }
 
   return (
